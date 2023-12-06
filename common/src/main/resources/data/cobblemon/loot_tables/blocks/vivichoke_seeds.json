@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "cobblemon:vivichoke_seeds",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "name": "cobblemon:vivichoke"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:vivichoke_seeds"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}
