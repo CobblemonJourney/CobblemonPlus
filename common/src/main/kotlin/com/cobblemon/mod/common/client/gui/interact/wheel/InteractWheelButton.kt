@@ -12,11 +12,9 @@ import com.cobblemon.mod.common.api.gui.blitk
 import net.minecraft.client.gui.DrawContext
 import net.minecraft.client.gui.widget.ButtonWidget
 import net.minecraft.client.sound.SoundManager
-import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 import org.joml.Vector3f
-import org.joml.Vector4f
 
 class InteractWheelButton(
     private val iconResource: Identifier?,

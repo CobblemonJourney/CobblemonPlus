@@ -71,7 +71,6 @@ transitive-accessible field  net/minecraft/recipe/BrewingRecipeRegistry POTION_R
 transitive-accessible field  net/minecraft/recipe/BrewingRecipeRegistry POTION_TYPES Ljava/util/List;
 transitive-accessible class  net/minecraft/recipe/BrewingRecipeRegistry$Recipe
 
-#transitive-accessible field net/minecraft/server/network/ServerPlayNetworkHandler connection Lnet/minecraft/network/ClientConnection;
 transitive-accessible field net/minecraft/server/network/ServerCommonNetworkHandler connection Lnet/minecraft/network/ClientConnection;
 transitive-accessible method net/minecraft/block/WoodType register (Lnet/minecraft/block/WoodType;)Lnet/minecraft/block/WoodType;
 transitive-accessible field com/mojang/blaze3d/systems/RenderSystem shaderLightDirections [Lorg/joml/Vector3f;

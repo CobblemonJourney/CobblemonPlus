@@ -10,6 +10,7 @@ package com.cobblemon.mod.common.api.storage.player
 
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.CobblemonNetwork.sendPacket
+import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.net.messages.client.starter.SetClientPlayerDataPacket
 import java.util.UUID
 import net.minecraft.server.network.ServerPlayerEntity
@@ -22,6 +23,7 @@ data class PlayerData(
     var starterSelected: Boolean,
     var starterUUID: UUID?,
     var keyItems: MutableSet<Identifier>,
+    var battleTheme: Identifier?,
     val extraData: MutableMap<String, PlayerDataExtension>,
 ) {
     var advancementData: PlayerAdvancementData = PlayerAdvancementData()
@@ -39,6 +41,7 @@ data class PlayerData(
             starterSelected =  false,
             starterUUID =  null,
             keyItems = mutableSetOf(),
+            battleTheme = CobblemonSounds.PVP_BATTLE.id,
             extraData = mutableMapOf()
         )
     }

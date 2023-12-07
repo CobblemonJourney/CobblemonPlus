@@ -32,6 +32,7 @@ object CobblemonPermissions {
     val LEVEL_UP_OTHER = this.create("$LEVEL_UP_BASE.other", PermissionLevel.CHEAT_COMMANDS_AND_COMMAND_BLOCKS)
 
     val OPEN_STARTER_SCREEN = this.create("${COMMAND_PREFIX}openstarterscreen", PermissionLevel.CHEAT_COMMANDS_AND_COMMAND_BLOCKS)
+    val BEDROCK_PARTICLE = this.create("${COMMAND_PREFIX}bedrockparticle", PermissionLevel.CHEAT_COMMANDS_AND_COMMAND_BLOCKS)
 
     private const val POKEMON_EDIT_BASE = "${COMMAND_PREFIX}pokemonedit"
     val POKEMON_EDIT_SELF = this.create("$POKEMON_EDIT_BASE.self", PermissionLevel.CHEAT_COMMANDS_AND_COMMAND_BLOCKS)

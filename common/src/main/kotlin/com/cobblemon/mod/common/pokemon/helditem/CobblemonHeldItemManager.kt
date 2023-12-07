@@ -18,7 +18,6 @@ import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.util.battleLang
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.item.Items
 import net.minecraft.text.Text
 import java.util.function.Function
 
@@ -127,7 +126,7 @@ object CobblemonHeldItemManager : BaseCobblemonHeldItemManager() {
             this.take(pokemon, itemID)
             return
         }
-        val sourceName = battleMessage.getSourceBattlePokemon(battle)?.getName() ?: return  // there MUST be a source
+        val sourceName = battleMessage.getSourceBattlePokemon(battle)?.getName() ?: Text.of("UNKNOWN")
         val effect = battleMessage.effect()
         val text = when {
             effect?.id != null -> battleLang("enditem.${effect.id}", battlerName, itemName, sourceName)

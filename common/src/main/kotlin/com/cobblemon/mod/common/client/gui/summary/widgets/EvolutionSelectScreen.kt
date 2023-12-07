@@ -57,7 +57,6 @@ class EvolutionSelectScreen(
             entriesCreated = true
             pokemon.evolutionProxy.client().map { EvolveSlot(pokemon, it) }.forEach { entry -> this.addEntry(entry) }
         }
-
         super.render(context, mouseX, mouseY, partialTicks)
     }
 

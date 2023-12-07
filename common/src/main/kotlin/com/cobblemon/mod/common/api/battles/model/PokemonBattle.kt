@@ -63,12 +63,13 @@ open class PokemonBattle(
     val side2: BattleSide
 ) {
     /** Whether logging will be silenced for this battle. */
-    var mute = false
+    var mute = true
 
     init {
         side1.battle = this
         side2.battle = this
         this.actors.forEach { actor ->
+            actor.battle = this
             actor.pokemonList.forEach { battlePokemon ->
                 battlePokemon.effectedPokemon.evolutionProxy.current().progress()
                     .filterIsInstance<LastBattleCriticalHitsEvolutionProgress>()
@@ -248,12 +249,10 @@ open class PokemonBattle(
             .forEach{it.pokemon.heal()}
         actors.forEach { actor ->
             actor.pokemonList.forEach { battlePokemon ->
-                battlePokemon.clearBattleFeatures()
                 battlePokemon.entity?.let { entity -> battlePokemon.postBattleEntityOperation(entity) }
             }
         }
         sendUpdate(BattleEndPacket())
-        sendUpdate(BattleMusicPacket(null))
         BattleRegistry.closeBattle(this)
     }
 

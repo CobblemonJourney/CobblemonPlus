@@ -11,7 +11,6 @@ package com.cobblemon.mod.common.pokemon.evolution.predicate
 import com.cobblemon.mod.common.api.conditional.RegistryLikeCondition
 import net.minecraft.item.Item
 import net.minecraft.predicate.NbtPredicate
-import java.util.Optional
 
 data class NbtItemPredicate(
     val item: RegistryLikeCondition<Item>,

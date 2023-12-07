@@ -7,7 +7,8 @@ else
     echo "Upstream remote already exists."
 fi
 
-git fetch upstream
-git merge upstream/main
+git fetch upstream main
+git merge --allow-unrelated-histories upstream/main
 
-rm -r forge
+# Suppress errors if the directory doesn't exist
+rm -rf forge

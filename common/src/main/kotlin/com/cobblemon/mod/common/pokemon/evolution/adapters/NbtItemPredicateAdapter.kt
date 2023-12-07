@@ -16,7 +16,6 @@ import com.mojang.serialization.JsonOps
 import net.minecraft.item.Item
 import net.minecraft.predicate.NbtPredicate
 import java.lang.reflect.Type
-import java.util.Optional
 
 object NbtItemPredicateAdapter : JsonDeserializer<NbtItemPredicate>, JsonSerializer<NbtItemPredicate> {
 

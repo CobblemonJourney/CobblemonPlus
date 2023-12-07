@@ -93,6 +93,7 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
 import kotlin.random.Random
+import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Effect
 
 open class Pokemon : ShowdownIdentifiable {
     var uuid = UUID.randomUUID()
@@ -1041,6 +1042,13 @@ open class Pokemon : ShowdownIdentifiable {
          */
         initializeMoveset()
         return this
+    }
+
+    // Last flower fed to a Mooshtank
+    var lastFlowerFed: ItemStack = ItemStack.EMPTY
+
+    fun feedFlower(itemStack: ItemStack) {
+        this.lastFlowerFed = itemStack
     }
 
     fun checkGender() {
